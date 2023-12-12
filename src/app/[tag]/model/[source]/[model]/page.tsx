@@ -19,8 +19,6 @@ async function ModelPage({ params: { model } }: PropTypes) {
 
   const link = `${MY_DOMAIN}?tag=girls&onlineModels=${currentModel.username}&userId=${USER_ID}`;
 
-  console.log('currentModel', currentModel);
-
   return (
     <div className={styles.Model}>
       <Description header={`${currentModel.username}'S WEB LIVE CAM`} />

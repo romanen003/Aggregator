@@ -16,6 +16,7 @@ type TagPageProps = {
   }
 };
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default async function ModelListContainer({ params: { tag, tags } }: TagPageProps) {
   const gender = getGenderId(tag);
   const { models, total } = await getModels({ gender });

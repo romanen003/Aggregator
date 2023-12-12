@@ -1,17 +1,13 @@
 import React, { ReactNode } from 'react';
 import type { Metadata } from 'next';
-import { Source_Sans_3 } from 'next/font/google';
+import clsx from 'clsx';
 
 import './styles/globals.css';
-import clsx from 'clsx';
 
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
-import Description from '@/app/components/Description';
 
 import styles from './styles.module.css';
-
-const inter = Source_Sans_3({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Enjoy with webcam',
@@ -27,7 +23,7 @@ export default function RootLayout({
 }: RootLayoutPropTypes) {
   return (
     <html lang="en">
-    <body className={inter.className}>
+    <body>
     <div className={styles.Layout}>
       <div className={styles.Layout__header}>
         <div className={styles.Layout__center}>

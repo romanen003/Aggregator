@@ -10,6 +10,7 @@ type SidebarPropTypes = {
 
 };
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function Sidebar(props: SidebarPropTypes) {
   const dicts = await getDicts();
 

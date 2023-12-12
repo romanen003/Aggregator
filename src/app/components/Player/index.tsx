@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect, useRef } from 'react';
 import Hls from 'hls.js';
 import Plyr from 'plyr';
@@ -33,6 +35,7 @@ function VideoPlayer({ src }:VideoPlayerPropTypes) {
       const hls = new Hls();
 
       hls.loadSource(src);
+      // eslint-disable-next-line no-new
       new Plyr(video, defaultOptions);
 
       hls.attachMedia(video);
@@ -44,6 +47,7 @@ function VideoPlayer({ src }:VideoPlayerPropTypes) {
   }, [src, videoRef]);
 
   return (
+    // eslint-disable-next-line jsx-a11y/media-has-caption
     <video className={styles.Player} data-displaymaxtap ref={videoRef} />
   );
 }

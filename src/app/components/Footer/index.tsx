@@ -6,6 +6,7 @@ type FooterPropTypes = {
 
 };
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function Footer(props: FooterPropTypes) {
   return (
     <div className={styles.Footer}>
