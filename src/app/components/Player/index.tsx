@@ -1,5 +1,3 @@
-'use client';
-
 import { useEffect, useRef } from 'react';
 import Hls from 'hls.js';
 import Plyr from 'plyr';
@@ -19,7 +17,7 @@ type VideoPlayerPropTypes = {
 }
 
 function VideoPlayer({ src }:VideoPlayerPropTypes) {
-  const videoRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const video = videoRef.current;

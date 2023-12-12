@@ -1,9 +1,6 @@
-'use client';
-
 import React from 'react';
 
 import TagList from '@/app/components/Sidebar/components/TagList';
-import { BOXES } from '@/app/components/Sidebar/constants';
 import getDicts from '@/app/api/getDicts';
 import getSidebarScheme from '@/app/components/Sidebar/utils/getSidebarScheme';
 
