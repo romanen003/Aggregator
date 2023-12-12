@@ -1,0 +1,18 @@
+.ModelList {
+    display: flex;
+    flex-direction: column;
+}
+
+.ModelList__content {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.ModelList__sidebar {
+    width: 320px;
+}
+
+.ModelList__main {
+    display: flex;
+}

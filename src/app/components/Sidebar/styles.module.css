@@ -1,0 +1,16 @@
+.Sidebar {
+    color: var(--main-text-color);
+    height: 100%;
+}
+
+.Sidebar__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Sidebar__contentItem {
+    background-color: var(--second-background);
+    padding: 20px;
+    border-radius: 5px;
+}

@@ -1,0 +1,21 @@
+.TagList {
+    padding: 10px 0;
+}
+
+.TagList__title {
+    display: block;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--fifth-color);
+    width: 100%;
+}
+
+.TagList__list {
+    padding: 10px 0;
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.TagList__bubbleWrapper {
+
+}

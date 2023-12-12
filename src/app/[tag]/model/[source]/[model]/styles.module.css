@@ -1,0 +1,11 @@
+.Model {
+    width: 100%;
+    height: 100%;
+
+}
+
+.Model__playerWrapper {
+    height: 400px;
+    margin-top: 20px;
+    width: 70%;
+}

@@ -1,0 +1,12 @@
+.Bubble {
+    border-radius: 15px;
+    border: 1px solid var(--fourth-color);
+    display: inline-block;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.Bubble_selected {
+    border: 1px solid var(--third-color);
+}

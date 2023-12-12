@@ -1,0 +1,64 @@
+.ModelItem {
+    aspect-ratio: 4/3;
+    background-color: var(--second-background);
+    border-radius: 5px;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    transition: transform 2s;
+    width: 100%;
+}
+
+.ModelItem:hover {
+    border: 1px solid var(--third-color);
+}
+
+.ModelItem:hover .ModelItem__info {
+    background-color: var(--third-color);
+}
+
+.ModelItem__imgWrapper {
+    height: calc(100% - 74px);
+    overflow: hidden;
+}
+
+.ModelItem__img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.ModelItem__info {
+    background-color: var(--second-background);
+    display: flex;
+    padding: 20px;
+    transition: width 2s, background-color 1s;
+}
+.ModelItem__country {
+    display: flex;
+    align-items: center;
+}
+
+.ModelItem__imgCountry {
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--second-color);
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    overflow: hidden;
+    width: 32px;
+}
+
+.ModelItem__nickname {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ModelItem__title {
+    color: var(--main-text-color);
+}

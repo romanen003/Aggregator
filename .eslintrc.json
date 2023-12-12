@@ -1,3 +1,59 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["airbnb","next/core-web-vitals"],
+  "rules": {
+    "no-unused-vars": "off",
+    "@typescript-eslint/array-type": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "ignoreRestSiblings": true,
+        "args": "after-used"
+      }
+    ],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "no-shadow": "off",
+    "arrow-parens": ["error", "always"],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "*", "next": "return" },
+      { "blankLine": "always", "prev": ["const", "let"], "next": "*" },
+      { "blankLine": "any", "prev": ["const", "let"], "next": ["const", "let"] }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          ["index", "sibling"]
+        ],
+        "newlines-between": "always"
+      }
+    ],
+    "import/extensions": "off",
+    "import/no-extraneous-dependencies": "off",
+    "react/jsx-wrap-multilines": "off",
+    "react/jsx-handler-names": ["error"],
+    "indent": "off",
+    "react/jsx-indent": "off",
+    "implicit-arrow-linebreak": [0],
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-filename-extension": "off",
+    "react/destructuring-assignment": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": [1],
+    "react/forbid-prop-types": [1],
+    "react/require-default-props": "off",
+    "react/default-props-match-prop-types": "off",
+    "class-methods-use-this": "off",
+    "func-style": ["error", "declaration", { "allowArrowFunctions": true }]
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"]
 }
