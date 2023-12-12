@@ -1,13 +1,17 @@
 import React, { ReactNode } from 'react';
 import type { Metadata } from 'next';
-import clsx from 'clsx';
+// eslint-disable-next-line camelcase,import/order
+import { Source_Sans_3 } from 'next/font/google';
 
 import './styles/globals.css';
+import clsx from 'clsx';
 
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
 
 import styles from './styles.module.css';
+
+const inter = Source_Sans_3({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Enjoy with webcam',
@@ -23,7 +27,7 @@ export default function RootLayout({
 }: RootLayoutPropTypes) {
   return (
     <html lang="en">
-    <body>
+    <body className={inter.className}>
     <div className={styles.Layout}>
       <div className={styles.Layout__header}>
         <div className={styles.Layout__center}>
