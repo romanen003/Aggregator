@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import type { Metadata } from 'next';
 // eslint-disable-next-line camelcase,import/order
 import { Source_Sans_3 } from 'next/font/google';
+// eslint-disable-next-line import/order
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import './styles/globals.css';

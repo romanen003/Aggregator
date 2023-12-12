@@ -6,11 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seed": "node -r dotenv/config ./scripts/seed.js"
   },
   "dependencies": {
+    "@vercel/postgres": "^0.5.1",
     "@vercel/speed-insights": "^1.0.1",
     "clsx": "^2.0.0",
+    "dotenv": "^16.3.1",
     "hls.js": "^1.4.13",
     "next": "14.0.3",
     "plyr": "^3.7.8",
