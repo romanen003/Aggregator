@@ -1,21 +1,32 @@
 import { GetDictsResponse } from '@/app/api/getDicts';
+import prepareBubbles from '@/app/components/Sidebar/utils/prepareBubbles';
+import splitCamelCaseToString from '@/app/components/Sidebar/utils/splitCamelCaseToString';
 
-function splitCamelCaseToString(s: string) {
-  return s.split(/(?=[A-Z])/).join(' ').toUpperCase();
-}
 const getSidebarScheme = (
   {
- country, region, sortBy, sortOrder, profileInterestedIn, gender, tag, ...all
-}:GetDictsResponse,
+    country,
+    region,
+    sortBy,
+    sortOrder,
+    profileInterestedIn,
+    language,
+    gender,
+    tag,
+    ...all
+  }:GetDictsResponse,
 ) => {
   const selectedData = Object.entries(all);
 
   return [{
     title: '',
-    list: selectedData.map((category) => ({
-      title: splitCamelCaseToString(category[0].replaceAll('profile', '')),
-      elements: category[1].map((item) => ({ title: item, link: `/${item}` })),
-    })),
+    list: selectedData.map(([category, tags]) => {
+      const formattedCategory = category.replaceAll('profile', '');
+
+      return ({
+        title: splitCamelCaseToString(formattedCategory),
+        elements: prepareBubbles(category, tags),
+      });
+    }),
 }];
 };
 

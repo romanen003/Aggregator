@@ -32,6 +32,14 @@ async function ModelPage({ params: { model } }: PropTypes) {
             />
          </div>
       </Link>
+      <div>
+        <ul>
+          <li>Username: {currentModel.username}</li>
+          <li>Models country: {currentModel.modelsCountry}</li>
+          <li>Languages: {currentModel.languages}</li>
+          <li>Status: {currentModel.status}</li>
+        </ul>
+      </div>
     </div>
   );
 }

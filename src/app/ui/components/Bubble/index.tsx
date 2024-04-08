@@ -3,7 +3,9 @@ import clsx from 'clsx';
 
 import styles from './styles.module.css';
 
-function Bubble({ children, isSelected }: PropsWithChildren<{isSelected: boolean}>) {
+type BubbleProps = PropsWithChildren<{isSelected: boolean}>
+
+function Bubble({ children, isSelected }: BubbleProps) {
   return (
     <div
       className={clsx(styles.Bubble, { [styles.Bubble_selected]: isSelected })}

@@ -2,8 +2,11 @@ import { sql } from '@vercel/postgres';
 
 const likes = 100;
 
-await sql`DROP DATABASE posts`;
-
+await sql`CREATE TABLE models (
+    username string, 
+    status string, 
+    customer_id INT
+);`;
 await fetch('https://go.bbrdbr.com/api/models?limit=0')
   .then((response) => response.json())
   .then(({ count, total, models }) => {

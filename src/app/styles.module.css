@@ -20,7 +20,7 @@
 }
 
 .Layout__center {
-  max-width: 1600px;
+  width: 1200px;
   padding: 0 20px;
   margin-left: auto;
   margin-right: auto;
@@ -34,10 +34,14 @@
 
 /* Mobile */
 @media (max-width: 700px) {
-
+  .Layout__center {
+    width: calc(100% - 40px);
+  }
 }
 
 /* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-
+@media (min-width: 701px) and (max-width: 1220px) {
+  .Layout__center {
+    width: calc(100% - 40px);
+  }
 }

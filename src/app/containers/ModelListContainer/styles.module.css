@@ -11,8 +11,19 @@
 
 .ModelList__sidebar {
     width: 320px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: scroll;
+    align-self: flex-start;
 }
 
 .ModelList__main {
-    display: flex;
+    flex-shrink: 1;
+}
+
+@media (max-width: 720px) {
+    .ModelList__sidebar {
+        display: none;
+    }
 }

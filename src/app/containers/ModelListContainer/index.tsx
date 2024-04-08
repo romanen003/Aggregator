@@ -16,19 +16,18 @@ type TagPageProps = {
   }
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default async function ModelListContainer({ params: { tag, tags } }: TagPageProps) {
-  const gender = getGenderId(tag);
-  const { models, total } = await getModels({ gender });
+  const gender = tags ? tag : getGenderId(tag);
+  const { models, total } = await getModels({ gender, tag: tags });
 
   return (
     <div className={styles.ModelList}>
       <Description header={`${total} CAM MODELS ONLINE`} />
       <div className={styles.ModelList__content}>
-        <main className={styles.Layout__main}>
+        <main className={styles.ModelList__main}>
           <List items={models} />
         </main>
-        <div className={styles.Layout__sidebar}>
+        <div className={styles.ModelList__sidebar}>
           <Sidebar />
         </div>
       </div>

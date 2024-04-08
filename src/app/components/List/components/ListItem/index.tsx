@@ -14,7 +14,7 @@ function ListItem({
   model,
 }: ListItemPropTypes) {
   return (
-    <Link className={styles.ModelItem} href={`./${model.gender}/model/stripchat/${model.username}`}>
+    <Link className={styles.ModelItem} href={`/${model.gender}/model/stripchat/${model.username}`}>
       <div className={styles.ModelItem__imgWrapper}>
          <Image
            className={styles.ModelItem__img}

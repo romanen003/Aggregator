@@ -5,7 +5,6 @@
     border: 1px solid transparent;
     display: flex;
     flex-direction: column;
-    height: 100%;
     overflow: hidden;
     position: relative;
     transition: transform 2s;
