@@ -28,7 +28,7 @@ export default function RootLayout({
   children,
 }: RootLayoutPropTypes) {
   return (
-    <html lang="en">
+    <html style={{ width: '100%' }} lang="en">
       <body className={inter.className}>
         <div className={styles.Layout}>
           <div className={styles.Layout__header}>
