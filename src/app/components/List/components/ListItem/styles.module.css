@@ -5,6 +5,7 @@
     border: 1px solid transparent;
     display: flex;
     flex-direction: column;
+    min-height: 100%;
     overflow: hidden;
     position: relative;
     transition: transform 2s;
@@ -44,7 +45,6 @@
 .ModelItem__imgCountry {
     align-items: center;
     border-radius: 50%;
-    border: 1px solid var(--second-color);
     display: flex;
     height: 32px;
     justify-content: center;

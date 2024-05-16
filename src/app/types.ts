@@ -1,6 +1,6 @@
 export enum GENDER_VIEW {
   GIRLS = 'girls',
-  MENS = 'mens',
+  MENS = 'men',
   COUPLES = 'couples',
   TRANS = 'trans'
 }

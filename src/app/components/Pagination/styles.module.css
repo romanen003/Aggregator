@@ -1,0 +1,91 @@
+.root {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.buttons {
+    margin: 0 10px;
+}
+
+.button {
+    display: inline-block;
+}
+
+.button:not(:last-child) {
+    margin-right: 10px;
+}
+
+.disabled {
+    opacity: 0.5;
+}
+
+.buttonGroups {
+    display: flex;
+}
+
+.button-inner {
+    display: inline;
+    min-width: 14px;
+}
+
+.text {
+    margin-left: 10px;
+    color: rgba(137, 140, 151, 1);
+    font-family: Source Sans Pro, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 120%;
+}
+
+.number {
+    font-weight: 600;
+}
+
+.pages {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: flex-end;
+    color: rgba(58, 63, 81, 1);
+}
+
+.PaginationItem {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    font-size: 12px;
+    font-weight: 600;
+    height: 24px;
+    justify-content: center;
+    line-height: 120%;
+    min-width: 24px;
+    outline: none;
+    text-align: center;
+}
+
+.PaginationItem:not(.PaginationItem_active):hover {
+    background-color: rgba(64, 169, 255, 0.1);
+    color: rgba(64, 169, 255, 1);
+}
+
+.PaginationItem_arrow {
+    background-color: transparent;
+}
+
+.PaginationItem_active {
+    background-color: rgba(58, 63, 81, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 479px) {
+    .buttons {
+        display: none;
+    }
+    .doubleArrow {
+        display: none;
+    }
+}

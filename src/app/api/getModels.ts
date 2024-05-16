@@ -7,7 +7,8 @@ type getModelsProps = {
     gender?: GENDER_DB | GENDER_DB[];
     modelsList?: string;
     limit?: number;
-    tag?: string[] | string;
+    tag?: string;
+    tags?: string[] | string;
 }
 
 export type ModelsResponse = {
@@ -17,22 +18,21 @@ export type ModelsResponse = {
 }
 
 const getModels = async ({
-    gender,
     tag,
+    tags,
     modelsList,
     limit = 50,
 }:getModelsProps = {}): Promise<ModelsResponse> => {
     const queryParams = qs.stringify({
             modelsList,
             ...(modelsList ? { limit: 1 } : { limit }),
-            ...(tag ? { tag: `${gender}/${tag}` } : { gender }),
+        tag,
+tags,
     }, {
         arrayFormat: 'comma',
         encodeValuesOnly: true,
         skipNulls: true,
     });
-
-    console.log('getModels', queryParams);
 
     const response = await fetch(`${MY_DOMAIN}/api/models?${queryParams}`, { cache: 'no-cache' });
 

@@ -12,6 +12,7 @@
 
 .Layout__footer {
   background-color: var(--footer-background);
+  margin-top: 20px;
 }
 
 .Layout__main {
