@@ -16,13 +16,13 @@ function ListItem({
   return (
     <Link className={styles.ModelItem} href={`/${model.gender}/model/stripchat/${model.username}`}>
       <div className={styles.ModelItem__imgWrapper}>
-         <Image
-           className={styles.ModelItem__img}
-           alt={`photo of ${model.username}`}
-           src={model.previewUrl}
-           width={300}
-           height={300}
-         />
+        <Image
+          className={styles.ModelItem__img}
+          alt={`photo of ${model.username}`}
+          src={model.previewUrl}
+          width={300}
+          height={300}
+        />
       </div>
       <div className={styles.ModelItem__info}>
         <div className={styles.ModelItem__country}>

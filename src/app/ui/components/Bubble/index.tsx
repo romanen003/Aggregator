@@ -10,12 +10,13 @@ type BubbleProps = PropsWithChildren<{
 
 function Bubble({ children, isSelected, onClick }: BubbleProps) {
   return (
-    <div
+    <button
+      type="button"
       onClick={onClick}
       className={clsx(styles.Bubble, { [styles.Bubble_selected]: isSelected })}
     >
       {children}
-    </div>
+    </button>
   );
 }
 

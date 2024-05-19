@@ -15,11 +15,11 @@ export type PaginationProps = {
 
 // eslint-disable-next-line react/function-component-definition
 const Pagination: FC<PaginationProps> = ({
-     total = 0,
-     perPage = 50,
-     interval = 2,
-     disabled = false,
-   }) => {
+  total = 0,
+  perPage = 50,
+  interval = 2,
+  disabled = false,
+}) => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const page = Number(searchParams.get('page')) || 1;

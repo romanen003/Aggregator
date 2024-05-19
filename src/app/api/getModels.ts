@@ -9,7 +9,7 @@ type getModelsProps = {
     limit?: number;
     tag?: string;
     tags?: string[] | string;
-    searchParams: SearchParamsType;
+    searchParams?: SearchParamsType;
 }
 
 export type ModelsResponse = {
@@ -23,7 +23,7 @@ const getModels = async ({
   tags,
   modelsList,
   limit = 50,
-  searchParams,
+  searchParams = {},
 }:getModelsProps): Promise<ModelsResponse> => {
   const queryParams = qs.stringify({
     modelsList,
