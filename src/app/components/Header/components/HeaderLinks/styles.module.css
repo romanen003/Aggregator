@@ -8,5 +8,5 @@
 }
 
 .Nav__item_active {
-    color: blue;
+    color: var(--third-color);
 }

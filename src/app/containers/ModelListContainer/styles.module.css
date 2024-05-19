@@ -17,6 +17,7 @@
     height: 100vh;
     overflow-y: scroll;
     align-self: flex-start;
+    flex-shrink: 0;
 }
 
 .ModelList__main {
