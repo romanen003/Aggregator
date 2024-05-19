@@ -7,3 +7,18 @@
 .Model__playerWrapper {
     margin-top: 20px;
 }
+
+.Model__infoWrapper {
+    margin-top: 20px;
+}
+
+.Model__info {
+    background: var(--second-color);
+    padding: 20px;
+    columns: 2;
+    column-gap: 40px;
+}
+
+.Model__infoItem {
+    padding: 10px;
+}

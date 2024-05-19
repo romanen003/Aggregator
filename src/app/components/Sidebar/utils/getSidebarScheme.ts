@@ -12,22 +12,20 @@ const getSidebarScheme = (
     language,
     gender,
     tag,
+    broadcastGender,
     ...all
   }:GetDictsResponse,
 ) => {
   const selectedData = Object.entries(all);
 
-  return [{
-    title: '',
-    list: selectedData.map(([category, tags]) => {
-      const formattedCategory = category.replaceAll('profile', '');
+  return selectedData.map(([category, tags]) => {
+    const formattedCategory = category.replaceAll('profile', '');
 
-      return ({
-        title: splitCamelCaseToString(formattedCategory),
-        elements: prepareBubbles(category, tags),
-      });
-    }),
-}];
+    return ({
+      title: splitCamelCaseToString(formattedCategory),
+      elements: prepareBubbles(category, tags),
+    });
+  });
 };
 
 export default getSidebarScheme;

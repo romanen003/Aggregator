@@ -26,18 +26,22 @@ async function ModelPage({ params: { model } }: PropTypes) {
         href={link}
         target="_blank"
       >
-         <div className={styles.Model__playerWrapper}>
-            <VideoPlayer
-              src={currentModel.stream.url}
-            />
-         </div>
+        <div className={styles.Model__playerWrapper}>
+          <VideoPlayer
+            src={currentModel.stream.url}
+          />
+        </div>
       </Link>
-      <div>
-        <ul>
-          <li>Username: {currentModel.username}</li>
-          <li>Models country: {currentModel.modelsCountry}</li>
-          <li>Languages: {currentModel.languages}</li>
-          <li>Status: {currentModel.status}</li>
+      <div className={styles.Model__infoWrapper}>
+        <ul className={styles.Model__info}>
+          <li className={styles.Model__infoItem}>Username:</li>
+          <li className={styles.Model__infoItem}>Models country:</li>
+          <li className={styles.Model__infoItem}>Languages:</li>
+          <li className={styles.Model__infoItem}>Status:</li>
+          <li className={styles.Model__infoItem}>{currentModel.username}</li>
+          <li className={styles.Model__infoItem}>{currentModel.modelsCountry}</li>
+          <li className={styles.Model__infoItem}>{currentModel.languages.map((item) => `${item.toUpperCase()}, `)}</li>
+          <li className={styles.Model__infoItem}>{currentModel.status}</li>
         </ul>
       </div>
     </div>

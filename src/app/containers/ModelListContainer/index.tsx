@@ -2,7 +2,7 @@ import React from 'react';
 
 import getModels from '@/app/api/getModels';
 import List from '@/app/components/List';
-import { GENDER_VIEW } from '@/app/types';
+import { GENDER_VIEW, SearchParamsType } from '@/app/types';
 import Sidebar from '@/app/components/Sidebar';
 import Description from '@/app/components/Description';
 // import Pagination from '@/app/components/Pagination';
@@ -13,11 +13,21 @@ type TagPageProps = {
   params: {
     tag?: GENDER_VIEW,
     tags?: string
-  }
+  },
+  searchParams: SearchParamsType
 };
 
-export default async function ModelListContainer({ params: { tag, tags } }: TagPageProps) {
-  const { models, total } = await getModels({ tag, tags });
+export default async function ModelListContainer({
+  params: {
+    tag,
+    tags,
+  },
+  searchParams,
+}: TagPageProps) {
+  const {
+    models,
+    total,
+  } = await getModels({ tag, tags, searchParams });
 
   return (
     <div className={styles.ModelList}>
@@ -28,7 +38,7 @@ export default async function ModelListContainer({ params: { tag, tags } }: TagP
           {/* <Pagination total={total} /> */}
         </main>
         <div className={styles.ModelList__sidebar}>
-          <Sidebar />
+          <Sidebar searchParams={searchParams} />
         </div>
       </div>
     </div>

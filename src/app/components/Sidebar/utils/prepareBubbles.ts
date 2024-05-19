@@ -14,16 +14,16 @@ const prepareBubbles = (
   tags: string[],
 ): {
   title: string,
-  link: string,
+  link: [string, string],
   category: string
 }[] => tags.map((tag) => {
-    const formattedTitle = TAGS_FORMATTER[category] ? TAGS_FORMATTER[category](tag) : tag;
+  const formattedTitle = TAGS_FORMATTER[category] ? TAGS_FORMATTER[category](tag) : tag;
 
-    return ({
-      title: splitCamelCaseToString(formattedTitle),
-      link: `/girls/tag/${tag}`,
-      category,
-    });
+  return ({
+    title: splitCamelCaseToString(formattedTitle),
+    link: [category, tag],
+    category,
+  });
 });
 
 export default prepareBubbles;

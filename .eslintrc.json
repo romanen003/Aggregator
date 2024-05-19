@@ -40,7 +40,7 @@
     "import/no-extraneous-dependencies": "off",
     "react/jsx-wrap-multilines": "off",
     "react/jsx-handler-names": ["error"],
-    "indent": "off",
+    "indent": ["error", 2],
     "react/jsx-indent": "off",
     "implicit-arrow-linebreak": [0],
     "react/jsx-one-expression-per-line": "off",
@@ -52,8 +52,9 @@
     "react/require-default-props": "off",
     "react/default-props-match-prop-types": "off",
     "class-methods-use-this": "off",
-    "func-style": ["error", "declaration", { "allowArrowFunctions": true }]
+    "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
+    "@stylistic/js/indent": ["error", 2]
   },
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"]
+  "plugins": ["@typescript-eslint", "@stylistic/js"]
 }

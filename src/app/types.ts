@@ -38,3 +38,5 @@ export type ModelType = {
   };
   languages: string[];
 }
+
+export type SearchParamsType = { [key: string]: string };
