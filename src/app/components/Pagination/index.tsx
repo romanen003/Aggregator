@@ -1,7 +1,7 @@
 'use client';
 
 import React, { FC, MouseEventHandler, useCallback } from 'react';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { ReadonlyURLSearchParams, usePathname, useSearchParams } from 'next/navigation';
 import clsx from 'clsx';
 
 import s from './styles.module.css';
@@ -40,7 +40,8 @@ const Pagination: FC<PaginationProps> = ({
   const isLast = page === pagesCount;
 
   const createPageURL = useCallback((pageNumber: number | string) => {
-    const params = new URLSearchParams(searchParams);
+    // @ts-ignore
+    const params = new URLSearchParams(searchParams as ReadonlyURLSearchParams);
 
     params.set('page', pageNumber.toString());
 
