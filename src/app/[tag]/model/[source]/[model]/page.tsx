@@ -33,16 +33,21 @@ async function ModelPage({ params: { model } }: PropTypes) {
         </div>
       </Link>
       <div className={styles.Model__infoWrapper}>
-        <ul className={styles.Model__info}>
-          <li className={styles.Model__infoItem}>Username:</li>
-          <li className={styles.Model__infoItem}>Models country:</li>
-          <li className={styles.Model__infoItem}>Languages:</li>
-          <li className={styles.Model__infoItem}>Status:</li>
-          <li className={styles.Model__infoItem}>{currentModel.username}</li>
-          <li className={styles.Model__infoItem}>{currentModel.modelsCountry}</li>
-          <li className={styles.Model__infoItem}>{currentModel.languages.map((item) => `${item.toUpperCase()}, `)}</li>
-          <li className={styles.Model__infoItem}>{currentModel.status}</li>
-        </ul>
+        <Link
+          href={link}
+          target="_blank"
+        >
+          <ul className={styles.Model__info}>
+            <li className={styles.Model__infoItem}>Username:</li>
+            <li className={styles.Model__infoItem}>Models country:</li>
+            <li className={styles.Model__infoItem}>Languages:</li>
+            <li className={styles.Model__infoItem}>Status:</li>
+            <li className={styles.Model__infoItem}>{currentModel.username}</li>
+            <li className={styles.Model__infoItem}>{currentModel.modelsCountry}</li>
+            <li className={styles.Model__infoItem}>{currentModel.languages.map((item) => `${item.toUpperCase()}, `)}</li>
+            <li className={styles.Model__infoItem}>{currentModel.status}</li>
+          </ul>
+        </Link>
       </div>
     </div>
   );
